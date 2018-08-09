@@ -1,6 +1,7 @@
 <template>
   <div>
     <form action="">
+      <!-- v-model と dispatchのどちらの可能 -->
       <input type="text" v-model.number="from">から
       <input type="text" :value="to" @input="updateTo">までをカンマ区切りで出力
       <br>
@@ -25,12 +26,14 @@
 
       separatedNum() {return this.$store.getters['numSeparator/separatedNum']},
       ...mapState('numSeparator',{
-        to: state => state.to
+        to: state => state.to,
+        // stateはv-modelで直接書き換えは出来ない
+        //from: state => state.from
       })
     },
     methods: {
       updateTo (e) {
-        this.$store.commit('numSeparator/updateTo', e.target.value)
+         this.$store.dispatch('numSeparator/updateTo', e.target.value)
       }
     }
   }
