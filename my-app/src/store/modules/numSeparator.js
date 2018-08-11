@@ -2,17 +2,17 @@
 // initial state
 const state = function() {
   return {
-    moduleName: 'numSeparator',
-    from: '1',
-    to: '2'
+    from: '',
+    to: '',
   }
 }
 
 // getters
 const getters = {
   from: state => state.from,
+  to: state => state.to,
   separatedNum: state => {
-    if (state.from != '' && state.to != '') {
+    if (state.from !== '' && state.to !== '') {
       let ar = []
       for (let i = state.from; i <= state.to; i++) {
         ar.push(i)

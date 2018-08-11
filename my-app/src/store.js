@@ -6,7 +6,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   modules: {
-    numSeparator
+    moduleA: numSeparator,
+    moduleB: numSeparator
   }
 })
 

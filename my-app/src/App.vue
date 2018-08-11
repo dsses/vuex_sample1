@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <NumSeparator />
+    <NumSeparator module="moduleA" />
+    <NumSeparator module="moduleB" />
   </div>
 </template>
 
