@@ -14,7 +14,7 @@
 <script>
   import { mapState } from 'vuex'
   export default {
-    name: "module",
+    name: "NumSeparator",
     props: {
       module: ""
     },
